@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load solo_tags %}
+{% load static %}
+{% block content %}
+{% get_solo 'counting.SiteConfiguration' as site_config %}
+<div class="col text-center pt-3">
+    <img src="{% static 'images/Skye.webp' %}" alt="My Image" width="100">
+  <p>
+    {% if site_config.greeting_text %}
+    {{ site_config.greeting_text }}
+    {% else %}
+    Привіт! <br> Я тренажер, який дозволить тобі повторити додавання.
+    <br> Я задам тобі 10 простих прикладів.
+    {% endif %}
+  </p>
+</div>
+<div class="col text-center pt-3">
+  <a href="{% url 'index' %}">Старт</a>
+</div>
+{% endblock %}
