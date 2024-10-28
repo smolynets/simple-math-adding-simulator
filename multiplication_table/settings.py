@@ -32,7 +32,7 @@ SECRET_KEY = "vw6xh^n^r5j!v*k+75*z^%s1kapcuh8y-qkcr#0&5r4=r72nb8"
 #     DEBUG = debug
 # except:
 #     DEBUG = True
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["*"]
 
